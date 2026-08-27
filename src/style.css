@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "element-plus/theme-chalk/dark/css-vars.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body { margin: 0; }
+
+/* 深色模式下的代码块背景（覆盖 highlight.js） */
+.dark .hljs {
+  background: #1e1e2e !important;
+}
