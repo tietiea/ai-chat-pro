@@ -179,7 +179,8 @@ async function sendRequest(conv: Conversation, streamMsg: Message) {
   loading.value = true
   controller.value = new AbortController()
   try {
-    const res = await fetch('/api/chat', {
+     const base = import.meta.env.VITE_API_BASE ?? ''
+    const res = await fetch(base + '/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
